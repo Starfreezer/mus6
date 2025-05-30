@@ -4,6 +4,7 @@ P = np.array([[0.1, 0.2, 0.3, 0.4], [0, 0, 1.0, 0], [0, 0, 0, 1.0], [1.0, 0, 0, 
 x_1 = P[0]
 n = 100000
 periodic = False
+output_individual = False
 period = 2  # if periodic adjust period here
 
 print(P)
@@ -15,8 +16,12 @@ for i in range(n):
     x_is[i + 1] = x_1 @ P
     x_1 = x_is[i + 1]
 
-for key in x_is.keys():
-    print(f"x_{key} = {x_is[key]}")
+if output_individual:
+    for key in x_is.keys():
+        print(f"x_{key} = {x_is[key]}")
+
+
+print(x_is[n])
 
 if periodic:
 
