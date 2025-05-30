@@ -24,8 +24,8 @@ for i in range(U_max):
     # All combinations of a and b
     for a_index, a in enumerate(A_values):
         for b_index, b in enumerate(B_values):
-            next_state = max(min(i + b, U_max) - a, 0)
-            prob = A_probs[a_index] * B_probs[b_index]
+            next_state = max(min(i + b, U_max) - a, 0) # Add to currentt state i to calculate next state
+            prob = A_probs[a_index] * B_probs[b_index] # Probability of next state
             P[i][next_state] += prob
 
 
