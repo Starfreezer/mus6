@@ -65,7 +65,7 @@ B_probs = [0.6, 0.3, 0.1]
 P = np.zeros(shape=(U_max, U_max))
 
 
-
+# GENERATE MATRIX USING THE FOWARD ALGORITHM TASK 6.2.2
 # All states
 for i in range(U_max):
     # All combinations of a and b
@@ -76,6 +76,7 @@ for i in range(U_max):
             P[i][next_state] += prob
 
 print(P)
+# TASK 6.2.3 Markov simulation
 dist = matrixWalk(P)
 print(dist)
 plot()
