@@ -1,5 +1,6 @@
 import numpy as np
 
+# This is the code for 6.1
 P = np.array([[0.1, 0.2, 0.3, 0.4], [0, 0, 1.0, 0], [0, 0, 0, 1.0], [1.0, 0, 0, 0]])
 x_1 = P[0]
 n = 100000
