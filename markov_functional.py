@@ -26,6 +26,7 @@ def calculateUNext(U_prev):
     U = max(min(U_prev + b_sample, U_max) - a_sample, 0)
     return U
 
+
 def plot():
     # Histogram (PDF)
     states = np.array(sorted(dist.keys()))
@@ -57,10 +58,5 @@ for i in range(n):
     dist.setdefault(U_next, 0)
     dist[U_next] = dist[U_next] + 1
 
-
-
 print(dist)
 plot()
-
-
-
