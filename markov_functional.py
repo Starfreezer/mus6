@@ -6,6 +6,8 @@ n = 10 ** 6
 U_0 = 0
 U_next = 0
 
+np.random.seed(1337)
+
 # Inter-arrival Time values and probs
 A_values = [2, 3, 4]
 A_probs = [0.2, 0.6, 0.2]
