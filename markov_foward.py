@@ -21,6 +21,7 @@ def matrixWalk(P):
 def plot():
     # Histogram (PDF)
     states = np.array(sorted(dist.keys()))
+    print("STATES: ", states)
     probs = np.array([dist[s] / n for s in states])
 
     plt.figure()
@@ -32,6 +33,7 @@ def plot():
 
     # CCDF
     ccdf = 1 - np.cumsum(probs)
+    ccdf[ccdf <= 0] = 1e-7  # avoid log(0)
 
     plt.figure()
     plt.plot(states, ccdf, marker='o', linestyle='--')
